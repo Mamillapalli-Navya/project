@@ -31,17 +31,25 @@ def explain_code(code, api_key, level_of_detail="detailed"):
         ```
         {code}
         ```
-        
-        Please provide the following in your explanation:
-        1. An overview of what the code does
-        2. A breakdown of each major section or function
-        3. Explanation of important variables and data structures
-        4. Any notable algorithms or patterns used
-        5. Potential edge cases or issues to be aware of
-        6. How the different parts of the code work together
-        
-        Make your explanation clear, concise, and educational, suitable for someone who wants to understand the code thoroughly.
-        """
+    
+    ("system", 
+You are an expert code reviewer and technical educator.
+Given the following code snippet, provide a comprehensive, step-by-step explanation suitable for a developer who wants to deeply understand and learn from the code.
+
+Please include:
+
+overview – What the code accomplishes.
+
+Detailed walkthrough – Break down each function or block.
+
+Key variables and data structures – What they represent and how they interact.
+
+Algorithms or design patterns used – Highlight anything noteworthy.
+
+Edge cases or bugs – What might go wrong and why.
+
+Integration logic – How the parts come together.
+"""
     )
     
     # Create the chain
